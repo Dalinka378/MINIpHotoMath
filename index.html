@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mini Photomath AI</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tesseract.js/4.0.2/tesseract.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.5.0/math.min.js"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Arial', sans-serif;
+    }
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      color: white;
+      text-align: center;
+      padding: 10px;
+    }
+    .container {
+      width: 90%;
+      max-width: 500px;
+      background: white;
+      color: black;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+    textarea, .output-box {
+      width: 100%;
+      padding: 10px;
+      border: 2px solid #ccc;
+      border-radius: 5px;
+      margin-bottom: 10px;
+      font-size: 16px;
+      resize: none;
+    }
+    .btn {
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      background: #ff9800;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+      margin: 5px;
+    }
+    .btn:hover {
+      background: #e68900;
+    }
+    .camera-btn {
+      background: #007bff;
+    }
+    .camera-btn:hover {
+      background: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <textarea id="mathInput" rows="2" placeholder="Introdu exercițiul"></textarea>
+    <div class="output-box" id="solution">Rezolvarea apare aici...</div>
+    <div class="output-box" id="result">Rezultatul: </div>
+    <button class="btn" onclick="solveExpression()">Rezolvă</button>
+    <button class="btn camera-btn" onclick="startCamera()">📷 Cameră</button>
+    <button class="btn" onclick="importFromGallery()">🖼️ Importă din galerie</button>
+  </div>
+
+  <script>
+    function solveExpression() {
+      let expression = document.getElementById('mathInput').value;
+      try {
+        let solution = math.simplify(expression).toString();
+        let result = math.evaluate(expression);
+        document.getElementById('solution').innerText = "Rezolvare: " + solution;
+        document.getElementById('result').innerText = "Rezultatul: " + result;
+      } catch (error) {
+        document.getElementById('solution').innerText = "Eroare de calcul!";
+        document.getElementById('result').innerText = "";
+      }
+    }
+
+    function startCamera() {
+      alert("Funcția de cameră va fi implementată aici");
+    }
+
+    function importFromGallery() {
+      alert("Funcția de import din galerie va fi implementată aici");
+    }
+  </script>
+</body>
+</html>
