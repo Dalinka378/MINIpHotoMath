@@ -30,3 +30,6 @@ function solveExpression() {
   function importFromGallery() {
     alert("Funcția de import din galerie va fi implementată aici");
   }
+  function addKeyboard(){
+    alert("Opened KeyBoard")
+  }
