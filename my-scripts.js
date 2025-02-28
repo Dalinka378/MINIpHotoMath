@@ -31,5 +31,9 @@ function solveExpression() {
     alert("Funcția de import din galerie va fi implementată aici");
   }
   function addKeyboard(){
-    alert("Opened KeyBoard")
+    let equation=document.getElementById('mathInput');
+    let text =equation.innerText.toLowerCase().replace(/[^a-z]/g, '');
+    equation.innerText=text;
+    
+   
   }

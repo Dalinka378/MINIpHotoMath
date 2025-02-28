@@ -72,3 +72,26 @@ input{
     position: relative;
     top: 50%;
 }
+
+
+
+html{
+  box-sizing: border-box;
+  height: 100%
+
+}
+*,
+*::before
+
+*::after{
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+
+
+}
+.wrapper{
+  backdrop-filter: blure(5.5px);
+-webkit-animation-filter:blur(5.5px) ;
+background: rgba(255, 255, 255);
+}
