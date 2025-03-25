@@ -105,6 +105,10 @@ border: 1px solid rgba(255, 255, 255, 0.34);
 flex-basis:400px;
 height: 540px;
 padding: 20px 35px;
+width: 400px;
+}
+.calc-container{
+  display: none;
 }
 .screen{
   backdrop-filter: blur(5.5px) ;

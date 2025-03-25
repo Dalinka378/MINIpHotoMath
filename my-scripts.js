@@ -27,7 +27,8 @@ function solveExpression() {
 
 function addKeyboard() {
   document.querySelector(".calc-buttons").style.display = "block";
-  document.querySelector(".container").style.display="none";
+  document.querySelector(".calc-container").style.display = "block";
+
 }
 
 let runningTotal = 0;
