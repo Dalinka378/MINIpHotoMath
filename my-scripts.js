@@ -79,11 +79,14 @@ function handleSymbol(symbol) {
     case "-":
     case "×":
     case "÷":
-      console.log("radical")
       handleMath(symbol);
       break;
-    case '':
-      
+    case "√":
+      console.log("radical");
+      previousOperator = "√";
+      flushOperation(parseInt(buffer));
+      buffer = runningTotal;
+      break;
   }
 }
 
@@ -94,7 +97,7 @@ function handleMath(symbol) {
 
   const intBuffer = parseInt(buffer);
 
-  console.log(runningTotal, intBuffer)
+  console.log(runningTotal, intBuffer);
 
   if (runningTotal === 0) {
     runningTotal = intBuffer;
@@ -115,7 +118,7 @@ function flushOperation(intBuffer) {
   } else if (previousOperator === "÷") {
     runningTotal /= intBuffer;
   } else if (previousOperator === "√") {
-    console.log("radical",intBuffer,runningTotal)
+    console.log("radical", intBuffer, runningTotal);
     runningTotal = Math.sqrt(intBuffer);
   }
 }
@@ -137,3 +140,52 @@ function init() {
 }
 
 init();
+
+
+
+<input type="number" id="numberInput" placeholder="Introduceți un număr">
+<button onclick="calculateLn()">ln(x)</button>
+<button onclick="calculateLog10()">log₁₀(x)</button>
+<p id="result"></p>
+
+
+    function calculateLn() {
+        let x = parseFloat(document.getElementById("numberInput").value);
+        if (x > 0) {
+            document.getElementById("result").innerText = "ln(" + x + ") = " + Math.log(x);
+        } else {
+            document.getElementById("result").innerText = "Eroare: x trebuie să fie pozitiv!";
+        }
+    }
+
+    function calculateLog10() {
+        let x = parseFloat(document.getElementById("numberInput").value);
+        if (x > 0) {
+            document.getElementById("result").innerText = "log₁₀(" + x + ") = " + Math.log10(x);
+        } else {
+            document.getElementById("result").innerText = "Eroare: x trebuie să fie pozitiv!";
+        }
+    }
+
+
+
+
+
+    <input type="number" id="baseInput" placeholder="Introduceți baza (b)">
+<input type="number" id="numberInput" placeholder="Introduceți numărul (x)">
+<button onclick="calculateLogBase()">log_b(x)</button>
+<p id="result"></p>
+
+
+    function calculateLogBase() {
+        let x = parseFloat(document.getElementById("numberInput").value);
+        let b = parseFloat(document.getElementById("baseInput").value);
+
+        if (x > 0 && b > 0 && b !== 1) {
+            let result = Math.log(x) / Math.log(b);
+            document.getElementById("result").innerText = "log_" + b + "(" + x + ") = " + result;
+        } else {
+            document.getElementById("result").innerText = "Eroare: x și b trebuie să fie pozitive, iar b ≠ 1!";
+        }
+    }
+
