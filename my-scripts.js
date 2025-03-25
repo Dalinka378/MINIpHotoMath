@@ -143,12 +143,6 @@ init();
 
 
 
-<input type="number" id="numberInput" placeholder="Introduceți un număr">
-<button onclick="calculateLn()">ln(x)</button>
-<button onclick="calculateLog10()">log₁₀(x)</button>
-<p id="result"></p>
-
-
     function calculateLn() {
         let x = parseFloat(document.getElementById("numberInput").value);
         if (x > 0) {
