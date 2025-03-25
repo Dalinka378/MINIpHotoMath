@@ -162,7 +162,7 @@ init();
     }
 
 
-
+init();
 
 
     <input type="number" id="baseInput" placeholder="Introduceți baza (b)">
