@@ -14,17 +14,15 @@
 
 <body>
   <div class="container wrapper">
-    <textarea id="mathInput" rows="2" placeholder="Introdu exercițiul" onpointerdown="addKeyboard()"></textarea>
+    <textarea id="mathInput" rows="2" placeholder="Introdu exercițiul" onpointerdown="addKeyboard()" class="screen"></textarea>
     <div class="output-box" id="steps"></div>
     <div class="output-box" id="result">Rezultatul: </div>
     <button class="btn" onclick="solveExpression()">Rezolvă</button>
     <button class="btn camera-btn" onclick="startCamera()">📷 Cameră</button>
     <button class="btn" onclick="importFromGallery()">🖼️ Importă din galerie</button>
   </div>
-  <div class="wrapper">
-    <section class="screen">
-      0
-     </section>
+  <div class="wrapper calc-container">
+    
 
 <section class="calc-buttons">
   <div class="calc-button-row">
