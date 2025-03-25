@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #1e3c72, #497D74);
+    color: #EFE9D5;
+    text-align: center;
+    padding: 10px;
+}
+
+.container {
+    width: 90%;
+    max-width: 500px;
+    background: rgba(239, 233, 213, 0.9);
+    color: #27445D;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(239, 233, 213, 0.6);
+    transition: all 0.3s ease-in-out;
+}
+
+.container:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    transform: translateY(-3px);
+}
+
+.calculator {
+    width: 90%;
+    max-width: 400px;
+    background: rgba(239, 233, 213, 0.9);
+    color: #27445D;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(239, 233, 213, 0.6);
+    transition: all 0.3s ease-in-out;
+    margin-top: 20px;
+}
+
+textarea, .output-box, input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #497D74;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    font-size: 16px;
+    resize: none;
+    background: rgba(255, 255, 255, 0.6);
+    color: #27445D;
+    outline: none;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+textarea::placeholder, input::placeholder {
+    color: rgba(39, 68, 93, 0.7);
+}
+
+.btn {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background: #EFE9D5;
+    color: #27445D;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    margin: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.btn:hover {
+    background: #497D74;
+    color: #EFE9D5;
+    transform: scale(1.03);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+    transform: scale(0.97);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+.camera-btn {
+    background: #71BBB2;
+}
+
+.camera-btn:hover {
+    background: #497D74;
+}
+
+.logaritm {
+    width: 100px;
+    height: auto;
+    position: relative;
+    display: flex;
+}
+
+input {
+    width: 100%;
+}
+
+.baza input {
+    position: relative;
+    top: 75%;
+}
+
+.expo input {
+    position: relative;
+    top: 50%;
+}
