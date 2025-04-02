@@ -127,3 +127,34 @@ function calculateLogBase() {
     document.getElementById("result").innerText = "Eroare: x și b trebuie să fie pozitive, iar b ≠ 1!";
   }
 }
+document.querySelectorAll('.key').forEach(button => {
+  button.addEventListener('click', function() {
+      const digit = this.textContent;
+      const target = document.querySelector('.output-box');
+      const rect = this.getBoundingClientRect();
+      const targetRect = target.getBoundingClientRect();
+
+      // Creăm un element temporar pentru animație
+      const animDigit = document.createElement('div');
+      animDigit.textContent = digit;
+      animDigit.classList.add('animating-digit');
+      document.body.appendChild(animDigit);
+
+      // Setăm poziția inițială
+      animDigit.style.position = 'absolute';
+      animDigit.style.left = `${rect.left + rect.width / 2}px`;
+      animDigit.style.top = `${rect.top + rect.height / 2}px`;
+
+      // Forțăm reflow pentru a aplica noua poziție
+      requestAnimationFrame(() => {
+          animDigit.style.transform = `translate(${targetRect.left - rect.left}px, ${targetRect.top - rect.top}px)`;
+          animDigit.style.opacity = '0';
+      });
+
+      // Ștergem elementul după animație și actualizăm output-ul
+      setTimeout(() => {
+          animDigit.remove();
+          target.value += digit; // Adăugăm cifra la ecranul de scriere
+      }, 500);
+  });
+});

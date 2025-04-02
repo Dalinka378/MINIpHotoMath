@@ -10,11 +10,14 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    min-height: 100vh;
     background: linear-gradient(135deg, #1e3c72, #497D74);
+    background-attachment: fixed; 
+    background-size: cover; 
     color: #EFE9D5;
     text-align: center;
     padding: 10px;
+    overflow: auto;
 }
 
 .container {
@@ -47,6 +50,7 @@ body {
     border: 1px solid rgba(239, 233, 213, 0.6);
     transition: all 0.3s ease-in-out;
     margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 textarea, .output-box, input {
