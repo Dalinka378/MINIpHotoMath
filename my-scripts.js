@@ -117,7 +117,7 @@ document.querySelector(".calc-buttons").addEventListener("click", (event) => {
   }
 });
 
-function calculateLogBase() {
+function calculateLn() {
   let x = parseFloat(document.getElementById("numberInput").value);
   let b = parseFloat(document.getElementById("baseInput").value);
 
