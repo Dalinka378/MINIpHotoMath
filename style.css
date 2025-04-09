@@ -63,10 +63,10 @@ width: 400px;
 .calc-button{
   backdrop-filter: blur(5.5px);
   -webkit-backdrop-filter: blur(5,5px);
-  background: rgba(255, 255, 255, 0.75);
-  border: 1px solid rgba(255, 255, 255, 0.75);
+  background: rgba(175, 232, 4, 0.75);
+  border: 1px solid rgb(35, 219, 176);
   border: 1px solid rgba(255, 255, 255, 0.01);
-  border-radius: 16px;
+  border-radius: 20px;
   box-shadow: 0 4px 30px rgba(35, 35, 35, 0.1);
   color:#232323;
   flex-basis: 20%;
@@ -84,7 +84,7 @@ width: 400px;
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(35, 35, 35, 0.1);
   color: #fff;
-  background: #d72880;
+  background: #28d742;
 
 }
 
