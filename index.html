@@ -6,6 +6,7 @@
   <title>Mini Photomath AI</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="style2.css">
+  <link rel="stylesheet" href="style3.css">
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tesseract.js/4.0.2/tesseract.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.5.0/math.min.js"></script>
@@ -26,13 +27,14 @@
 
 <section class="calc-buttons">
   <div class="calc-button-row">
-    <button class="calc-button double">
-      C
-    </button>
     <button class="calc-button">
+      
+    </button>
+    
+    <button class="calc-button" id="calc-button">
       &larr;
     </button>
-    <button class="calc-button">
+    <button class="calc-button" id="calc-button">
       &divide;
     </button>
   <button class="calc-button">
@@ -86,15 +88,15 @@
 </div>
 
     <div class="calc-button-row">
-      <button class="calc-button">
-        log
+      <button class="calc-button double">
+        C
       </button>
+
       <button class="calc-button" onclick="calculateLog10()">
         0
       </button>
-      <button class="calc-button" onclick="calculateLn()">
-        lg
-      </button>
+
+
       <button class="calc-button">
         √
       </button>
